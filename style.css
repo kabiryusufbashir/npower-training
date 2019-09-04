@@ -58,3 +58,8 @@ main{
   margin: 2% 5%;
   padding: 2% 2%;
 }
+
+.col-fill input[type="text"]{
+  height: 45px;
+  width: 100%;
+}
