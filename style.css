@@ -27,3 +27,12 @@ header nav ul li{
   color: #333;
   padding: 0px 3%;
 }
+
+.banner{
+  width: 100%;
+  float: left;
+}
+
+.banner img{
+  width: 100%;
+}
