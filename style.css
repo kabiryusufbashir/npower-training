@@ -19,7 +19,18 @@ a:focus{
 }
 
 .box, .box1, .box2, .box3, .box4, .box5, .box6{
-  width: 300px;
+  width: 410px;
   border: 2px solid #ddd;
   margin: 10px;
+  padding: 5px;
+  float: left;
+}
+
+table{
+  border-bottom-style: dotted;
+}
+
+table tr:nth-child(even){
+  background: #ffc;
+  color: #000;
 }
