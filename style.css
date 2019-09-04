@@ -36,3 +36,8 @@ header nav ul li{
 .banner img{
   width: 100%;
 }
+
+main{
+  width: 100%;
+  float: left;
+}
