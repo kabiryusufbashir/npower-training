@@ -73,7 +73,12 @@ footer{
 }
 
 @media screen and  (max-width: 760px){
-  body{
-    background: pink;
+  .col-fill, .col-half{
+    width: 86%;
+  }
+
+
+  header nav ul{
+    padding: 2%;
   }
 }
