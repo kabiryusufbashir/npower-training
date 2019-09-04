@@ -63,3 +63,11 @@ main{
   height: 45px;
   width: 100%;
 }
+
+footer{
+  background: #fff;
+  float: left;
+  width: 90%;
+  padding: 2% 5%;
+  text-align: center;
+}
