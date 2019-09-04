@@ -5,3 +5,7 @@ h1{
 p{
   font-size: 20px;
 }
+
+.box{
+  background-image: url(./assests/npower.png);
+}
