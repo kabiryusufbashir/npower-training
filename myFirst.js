@@ -3,8 +3,10 @@ var number = 6;
 var boolean = true;
 
 var a = 5;
-var b = 8;
+var b = 7;
 
-var c = b - a;
+var c = b % a;
 
-alert(c);
+document.write(c);
+
+console.log(c);
