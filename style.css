@@ -17,3 +17,9 @@ a:visited{
 a:focus{
   color: orange;
 }
+
+.box, .box1, .box2, .box3, .box4, .box5, .box6{
+  width: 300px;
+  border: 2px solid #ddd;
+  margin: 10px;
+}
