@@ -2,6 +2,7 @@ body{
   margin: 0px;
   padding: 0px;
   font-family: palatino;
+  background: #333;
 }
 
 header{
@@ -40,4 +41,20 @@ header nav ul li{
 main{
   width: 100%;
   float: left;
+}
+
+.col-half{
+  width: 56%;
+  float: left;
+  background: #fff;
+  margin: 2% 5%;
+  padding: 2% 2%;
+}
+
+.col-fill{
+  width: 16%;
+  float: left;
+  background: #fff;
+  margin: 2% 5%;
+  padding: 2% 2%;
 }
