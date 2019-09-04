@@ -9,3 +9,11 @@ p{
 .box{
   background-image: url(./assests/npower.png);
 }
+
+a:visited{
+  color: red;
+}
+
+a:focus{
+  color: orange;
+}
