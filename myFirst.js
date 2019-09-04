@@ -3,13 +3,16 @@ var number = 6;
 var boolean = true;
 
 var a = 5;
-var b = "5";
 
-if(a == b){
+for(var x=1; x<=a; x++){
+  console.log(a);
+}
+
+/*if(a === b){
   console.log(true);
 }else{
   console.log(false);
-}
+}*/
 
 //var c = b % a;
 
