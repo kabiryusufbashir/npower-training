@@ -1,4 +1,29 @@
 body{
   margin: 0px;
   padding: 0px;
+  font-family: palatino;
+}
+
+header{
+  background: #333;
+  width: 100%;
+  float: left;
+  text-align: center;
+  color: #fff;
+  padding-top: 4%;
+}
+
+header nav{
+  background: #fff;
+  height: 50px;
+}
+
+header nav ul{
+  padding: 1%;
+}
+
+header nav ul li{
+  display: inline;
+  color: #333;
+  padding: 0px 3%;
 }
