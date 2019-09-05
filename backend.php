@@ -1,6 +1,20 @@
 <link rel="stylesheet" href="./style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <?php
+
+    echo '<div class="col-fill">';
+      echo '<h1>Cookies</h1>';
+      setCookie('user', 'Yusuf', time() + 30, "/");
+
+        if(!isset($_COOKIE['user'])){
+          echo 'Cookie not set';
+        }else{
+          echo $_COOKIE['user'];
+        }
+
+    echo '</div>';
+
     echo '<div class="col-fill">';
 
     if(isset($_POST['submit'])){
