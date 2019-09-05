@@ -12,7 +12,7 @@
         if(!empty($name)){
           if(!empty($email)){
             if(!empty($message)){
-              echo $name .' submitted his email as: '.$email.' and a message as: '.$message.'<hr>';
+              echo '<b>'.$name .'</b> submitted his email as: <b>'.$email.'</b> and a message as: <b>'.$message.'</b><hr>';
             }else{
               echo 'Message field is empty';
             }
