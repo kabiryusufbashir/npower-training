@@ -40,12 +40,23 @@
 
       echo '<h1>Functions (Class-Work)</h1>';
 
-      function nPower($friuts, $name){
-        return $name .' loved '.$fruits;
+
+      $array_fruits = array('banana', 'apple', 'orange', 'mango');
+
+      function nPower($myfruit, $name){
+        return $name .' loved '.$myfruit;
       }
 
-      $favorite = nPower(banana, Yusuf);
-      echo $result;
+      echo 'From the list of fruits:<br>';
+
+      echo '<div style="border:2px solid #000; margin-top:2%; text-align:center;">';
+      foreach ($array_fruits as $fruit_type) {
+        echo $fruit_type.'<br>';
+      }
+      echo '</div>';
+
+      $favorite = nPower('banana', 'Yusuf');
+      echo '<br>'.$favorite;
 
       echo '</div>';
  ?>
