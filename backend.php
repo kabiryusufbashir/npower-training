@@ -1,6 +1,18 @@
 <link rel="stylesheet" href="./style.css">
 
 <?php
+    echo '<div class="col-fill">';
+    echo '
+      <form>
+        <label>Name</label><br>
+        <input type="text" name="name" placeholder="Full Name"><br>
+        <label>Email</label><br>
+        <input type="email" name="email" placeholder="Full Name"><br>
+        <input type="submit" name="submit" value="Submit"><br>
+      </form>
+    ';
+    echo '</div>';
+
   $fruits = array('mango', 'banana', 'apple', 'orange');
     $fruitsLen = count($fruits);
 
@@ -59,9 +71,13 @@
 
       echo '</div>';
 
+      echo '<div class="col-fill">';
+
       echo '<h1>Web Concepts</h1>';
 
       $browser_name = $_SERVER['HTTP_USER_AGENT'];
 
       echo 'You are browsing on: '.$browser_name;
+
+      echo '</div>';
  ?>
