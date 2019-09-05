@@ -11,12 +11,16 @@
 
         if(!empty($name)){
           if(!empty($email)){
-            echo $name .' submitted his email as: '.$email.' and a message as: '.$message;
+            if(!empty($message)){
+              echo $name .' submitted his email as: '.$email.' and a message as: '.$message.'<hr>';
+            }else{
+              echo 'Message field is empty';
+            }
           }else{
-            echo 'EMail field is empty';
+            echo 'Email field is empty<hr>';
           }
         }else{
-          echo 'Name field is empty';
+          echo 'Name field is empty<hr>';
         }
     }
 
