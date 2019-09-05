@@ -60,7 +60,7 @@ main{
 }
 
 .col-fill input[type="text"]{
-  height: 45px;
+  height: 35px;
   width: 100%;
 }
 
@@ -76,7 +76,6 @@ footer{
   .col-fill, .col-half{
     width: 86%;
   }
-
 
   header nav ul{
     padding: 2%;
