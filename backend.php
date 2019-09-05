@@ -2,12 +2,32 @@
 
 <?php
     echo '<div class="col-fill">';
+
+    if(isset($_POST['submit'])){
+
+      $name = $_POST['email'];
+      $email = $_POST['email'];
+      $message = $_POST['message'];
+
+        if(!empty($name)){
+          if(!empty($email)){
+            echo $name .' submitted his email as: '.$email.' and a message as: '.$message;
+          }else{
+            echo 'EMail field is empty';
+          }
+        }else{
+          echo 'Name field is empty';
+        }
+    }
+
     echo '
       <form method="POST" action="'.$_SERVER['PHP_SELF'].'">
         <label>Name</label><br>
         <input type="text" name="name" placeholder="Full Name"><br><br>
         <label>Email</label><br>
-        <input type="email" name="email" placeholder="Full Name"><br><br>
+        <input type="email" name="email" placeholder="Email"><br><br>
+        <label>Message</label><br>
+        <input type="text" name="message" placeholder="Message"><br><br>
         <input type="submit" name="submit" value="Submit"><br>
       </form>
     ';
