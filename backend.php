@@ -4,6 +4,12 @@
 <?php
 
     echo '<div class="col-fill">';
+      echo '<h1>PHP & MySQL Connection</h1>';
+        $connection = mysql_connect('localhost', 'root', 'K@rn@ugh123');
+
+    echo '</div>';
+
+    echo '<div class="col-fill">';
       echo '<h1>Cookies</h1>';
       setCookie('user', 'Yusuf', time() + 30, "/");
 
