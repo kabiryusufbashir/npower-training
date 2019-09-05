@@ -3,11 +3,11 @@
 <?php
     echo '<div class="col-fill">';
     echo '
-      <form>
+      <form method="POST" action="'.$_SERVER['PHP_SELF'].'">
         <label>Name</label><br>
-        <input type="text" name="name" placeholder="Full Name"><br>
+        <input type="text" name="name" placeholder="Full Name"><br><br>
         <label>Email</label><br>
-        <input type="email" name="email" placeholder="Full Name"><br>
+        <input type="email" name="email" placeholder="Full Name"><br><br>
         <input type="submit" name="submit" value="Submit"><br>
       </form>
     ';

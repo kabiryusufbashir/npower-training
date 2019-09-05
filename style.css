@@ -59,7 +59,7 @@ main{
   padding: 2% 2%;
 }
 
-.col-fill input[type="text"]{
+.col-fill input{
   height: 35px;
   width: 100%;
 }
