@@ -40,7 +40,6 @@
 
       echo '<h1>Functions (Class-Work)</h1>';
 
-
       $array_fruits = array('banana', 'apple', 'orange', 'mango');
 
       function nPower($myfruit, $name){
@@ -59,4 +58,10 @@
       echo '<br>'.$favorite;
 
       echo '</div>';
+
+      echo '<h1>Web Concepts</h1>';
+
+      $browser_name = $_SERVER['HTTP_USER_AGENT'];
+
+      echo 'You are browsing on: '.$browser_name;
  ?>
