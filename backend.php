@@ -1,6 +1,9 @@
 <?php
   $fruits = array('mango', 'banana', 'apple', 'orange');
     $fruitsLen = count($fruits);
+
+    echo '<h1>Friuts I love!!!</h1>';
+
       foreach ($fruits as $type) {
         echo 'I love : '.$type.'<br>';
       }
