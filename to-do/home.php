@@ -24,7 +24,12 @@
           if(isset($_POST['add'])){
             $todo = htmlentities($_POST['add']);
               if(!empty($todo)){
-
+                $sql = "INSERT INTO to_do(do) VALUES('{$todo}')";
+                    if($conn->query($sql)){
+                      echo $todo .' Added';  
+                    }else{
+                      echo 'Please try again...';
+                    }
               }else{
                 echo 'ToDo field is empty';
               }
