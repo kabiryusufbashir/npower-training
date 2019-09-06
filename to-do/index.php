@@ -17,6 +17,23 @@
         }
     ?>
     <h1>To Do APP</h1>
+    <?php
+      if(isset($POST['submit'])){
+        if(isset($_POST['username'], $_POST['password'])){
+          $username = htmlentities($_POST['username']);
+          $password = htmlentities($_POST['password']);
+            if(!empty($username)){
+              if(!empty($password)){
+                echo 'Good to go...';
+              }else{
+                echo 'Password field empty...<hr />';
+              }
+            }else{
+              echo 'Username field empty...<hr />';
+            }
+        }
+      }
+    ?>
     <form action="<?php $_SERVER['PHP_SELF'];?>" method="post">
       <input type="text" name="username" placeholder="Username"><br>
       <input type="password" name="password" placeholder="Password"><br>
