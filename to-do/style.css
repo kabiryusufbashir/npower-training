@@ -1,0 +1,25 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+input[type="text"]{
+  width: 50%;
+  height: 45px;
+  padding: 5px 2%;
+  font-size: 24px;
+}
+
+input[type="submit"]{
+  width: 10%;
+  height: 60px;
+  background: green;
+  color: #fff;
+  border: none;
+  position: relative;
+  top: -1px;
+  font-size: 24px;
+}
