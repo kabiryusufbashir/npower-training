@@ -6,11 +6,12 @@ body{
   text-align: center;
 }
 
-input[type="text"]{
+input[type="text"], input[type="password"]{
   width: 50%;
   height: 45px;
   padding: 5px 2%;
   font-size: 24px;
+  margin-bottom: 2%;
 }
 
 input[type="submit"]{
