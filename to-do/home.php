@@ -42,14 +42,15 @@
           }
         }
       ?>
-      <div class="">
 
       <?php
-        $todo_display = "SELECT * FROM `to_do`";
+        $todo_display = "SELECT * FROM `to_do` ORDER BY `id` DESC";
           $todo_display = $conn->query($todo_display);
             while($row = mysqli_fetch_array($todo_display)){
               $todo_list = $row['do'];
+                echo '<div class="todo_table">';
                 echo $todo_list.'<br>';
+                echo '</div>';
             }
       ?>
 

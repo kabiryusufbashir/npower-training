@@ -41,3 +41,10 @@ input[type="submit"]{
 .to-do input[type="text"], .to-do input[type="password"]{
   width: 80%;
 }
+
+.todo_table{
+  text-align: left;
+  margin-bottom: 1%;
+  border: 1px solid #333;
+  padding: 1% 1%;
+}
