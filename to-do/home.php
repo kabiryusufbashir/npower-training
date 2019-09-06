@@ -1,5 +1,7 @@
+<?php
+  session_start();
 
-
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -13,14 +15,17 @@
         if($conn->connect_error){
           die('Database Connection Failed');
         }else{
-          echo '<h1>We are connected</h2>';
+          //echo '<h1>We are connected</h2>';
         }
     ?>
     <h1>To Do APP</h1>
-    <form action="<?php $_SERVER['PHP_SELF'];?>" method="post">
-      <input type="text" name="add" placeholder="Add a To Do">
-      <input type="submit" name="submit" value="Add">
-    </form>
+    <div class="to-do">
+      <form action="<?php $_SERVER['PHP_SELF'];?>" method="post">
+        <input type="text" name="add" placeholder="Add a To Do">
+        <input type="submit" name="submit" value="Add">
+      </form>
+    </div>
+
   </body>
 </html>
 <?php

@@ -39,6 +39,7 @@
                           $_SESSION['username'] = $username;
                           $_SESSION['msg'] = 'Welcome to your dashboard '.$username;
                             header('Location: home.php');
+                            exit();
                         }
                     }
                   }

@@ -1,8 +1,7 @@
 body{
   padding: 0px;
   margin: 0px;
-  background: #333;
-  color: #fff;
+  color: #000;
   text-align: center;
 }
 
@@ -27,4 +26,17 @@ input[type="submit"]{
 
 .valid_section{
   font-size: 24px;
+}
+
+.to-do{
+  background: #fff;
+  width: 70%;
+  margin: 0px auto;
+  padding: 2% 5%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.to-do input[type="text"], .to-do input[type="password"]{
+  width: 80%;
 }
