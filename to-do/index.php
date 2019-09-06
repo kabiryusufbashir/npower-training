@@ -25,7 +25,7 @@
           $password = htmlentities($_POST['password']);
             if(!empty($username)){
               if(!empty($password)){
-                echo 'Good to go...';
+                $sql = "INSERT INTO users(email, password) VALUES('{$email}', '{$password}')";
               }else{
                 echo 'Password field empty...<hr />';
               }
