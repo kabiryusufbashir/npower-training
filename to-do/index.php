@@ -1,11 +1,4 @@
-<?php
-  $conn = mysqli_connect('localhost', 'root', 'K@rn@ugh123', 'npower_training');
-    if($conn->connect_error){
-      die('Database Connection Failed');
-    }else{
-      die('We are connected');
-    }
-?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -15,11 +8,18 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+    <?php
+      $conn = mysqli_connect('localhost', 'root', 'K@rn@ugh123', 'npower_training');
+        if($conn->connect_error){
+          die('Database Connection Failed');
+        }else{
+          echo '<h1>We are connected</h2>';
+        }
+    ?>
     <h1>To Do APP</h1>
     <form action="index.html" method="post">
       <input type="text" name="add" placeholder="Add a To Do">
       <input type="submit" name="submit" value="Add">
-
     </form>
   </body>
 </html>
