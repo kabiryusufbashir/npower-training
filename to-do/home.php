@@ -49,22 +49,28 @@
           }
         }
       ?>
-
+      <?php
+        if(isset($_POST['delete'])){
+          echo 'OKayyy';
+        }
+      ?>
       <?php
         $todo_display = "SELECT * FROM `to_do` WHERE `user_id`='{$user_id}' ORDER BY `id` DESC";
           $todo_display = $conn->query($todo_display);
             while($row = mysqli_fetch_array($todo_display)){
+              $todo_list_id = $row['id'];
               $todo_list = $row['do'];
                 echo '<div class="todo_table">';
 
                   echo '<div class="items">';
                   echo $todo_list;
                   echo '</div>';
-
-                  echo '<div class="btn">';
-                  echo '<span><input type="submit" value="Update"></span>';
-                  echo '<span><input type="submit" value="Delete"></span>';
-                  echo '</div>';
+                  echo '<form method="POST" action="home.php">';
+                    echo '<div class="btn">';
+                      echo '<span><input name="update" type="submit" value="Update"></span>';
+                      echo '<span><input name="delete" style="background:red;" type="submit" value="Delete"></span>';
+                    echo '</div>';
+                  echo '</form>';
 
                 echo '</div>';
                 echo '<br>';
