@@ -11,12 +11,7 @@
   </head>
   <body>
     <?php
-      $conn = mysqli_connect('localhost', 'root', 'K@rn@ugh123', 'npower_training');
-        if($conn->connect_error){
-          die('Database Connection Failed');
-        }else{
-          //echo '<h1>We are connected</h2>';
-        }
+      include './connect.inc.php';
     ?>
     <h1>To Do APP</h1>
     <div class="to-do">
@@ -24,6 +19,18 @@
         <input type="text" name="add" placeholder="Add a To Do">
         <input type="submit" name="submit" value="Add">
       </form>
+      <?php
+        if(isset($_POST['submit'])){
+          if(isset($_POST['add'])){
+            $todo = htmlentities($_POST['add']);
+              if(!empty($todo)){
+
+              }else{
+                echo 'ToDo field is empty';
+              }
+          }
+        }
+      ?>
     </div>
 
   </body>
