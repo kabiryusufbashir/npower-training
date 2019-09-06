@@ -1,5 +1,6 @@
-
-
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -29,11 +30,15 @@
                 $sql_check = "SELECT email FROM users WHERE `email`='{$username}'";
                   if($result = $conn->query($sql_check)){
                     if($result->num_rows > 0){
-                      echo 'Username already exits';
+                      $_SESSION['username'] = $username;
+                      $_SESSION['msg'] = 'Welcome to your dashboard '.$username;
+                        header('Location: home.php');
                     }else{
                       $sql = "INSERT INTO users(fullname, password) VALUES('{$username}', '{$password}')";
                         if($conn->query($sql) === true){
-                          echo 'You have successfully registered';
+                          $_SESSION['username'] = $username;
+                          $_SESSION['msg'] = 'Welcome to your dashboard '.$username;
+                            header('Location: home.php');
                         }
                     }
                   }
