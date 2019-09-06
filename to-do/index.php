@@ -17,17 +17,24 @@
           echo '<h1>We are connected</h2>';
         }
     ?>
+
+    <div class="to-do">
     <h1>To Do APP</h1>
     <div class="valid_section">
     <?php
       if(isset($_POST['submit'])){
         if(isset($_POST['username'], $_POST['password'])){
+
+          if(isset($_POST['remember'])){
+            setcookie('npower', '{$email}', time() * 86400 * 30);
+          }
+
           $username = htmlentities($_POST['username']);
           $password = htmlentities($_POST['password']);
             if(!empty($username)){
               if(!empty($password)){
 
-                $sql_check = "SELECT email FROM users WHERE `email`='{$username}'";
+                $sql_check = "SELECT username FROM users WHERE `email`='{$username}'";
                   if($result = $conn->query($sql_check)){
                     if($result->num_rows > 0){
                       $_SESSION['username'] = $username;
@@ -57,7 +64,14 @@
       <input type="text" name="username" placeholder="Username"><br>
       <input type="password" name="password" placeholder="Password"><br>
       <input type="submit" name="submit" value="Login">
+      <div>
+        <label for="remember-me">
+          Remember Me <input type="checkbox" name="remember">
+        </label>
+      </div>
     </form>
+  </div>
+
   </body>
 </html>
 <?php
