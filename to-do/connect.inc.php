@@ -3,6 +3,6 @@
     if($conn->connect_error){
       die('Database Connection Failed');
     }else{
-      echo '<h1>We are connected</h2>';
+      //echo '<h1>We are connected</h2>';
     }
 ?>

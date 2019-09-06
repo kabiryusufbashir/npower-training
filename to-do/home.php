@@ -1,6 +1,11 @@
 <?php
   session_start();
-
+  if(isset($_SESSION['username'], $_SESSION['msg'])){
+    $username = $_SESSION['username'];
+    $msg = $_SESSION['msg'];
+  }else{
+    header('Location: ./index.php');
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -13,7 +18,8 @@
     <?php
       include './connect.inc.php';
     ?>
-    <h1>To Do APP</h1>
+    <h1><?php echo $msg; ?></h1>
+    <h3>To Do APP</h3>
     <div class="to-do">
       <form action="<?php $_SERVER['PHP_SELF'];?>" method="post">
         <input type="text" name="add" placeholder="Add a To Do">
@@ -36,7 +42,18 @@
           }
         }
       ?>
-      hhgghghghsghhgsghghsghdghsgdh
+      <div class="">
+
+      <?php
+        $todo_display = "SELECT * FROM `to_do`";
+          $todo_display = $conn->query($todo_display);
+            while($row = mysqli_fetch_array($todo_display)){
+              $todo_list = $row['do'];
+                echo $todo_list.'<br>';
+            }
+      ?>
+
+      </div>
     </div>
 
   </body>
