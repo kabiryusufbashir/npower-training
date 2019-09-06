@@ -26,7 +26,7 @@
               if(!empty($todo)){
                 $sql = "INSERT INTO to_do(do) VALUES('{$todo}')";
                     if($conn->query($sql)){
-                      echo $todo .' Added';  
+                      echo $todo .' Added';
                     }else{
                       echo 'Please try again...';
                     }
@@ -36,6 +36,7 @@
           }
         }
       ?>
+      hhgghghghsghhgsghghsghdghsgdh
     </div>
 
   </body>
