@@ -17,8 +17,9 @@
         }
     ?>
     <h1>To Do APP</h1>
+    <div class="valid_section">
     <?php
-      if(isset($POST['submit'])){
+      if(isset($_POST['submit'])){
         if(isset($_POST['username'], $_POST['password'])){
           $username = htmlentities($_POST['username']);
           $password = htmlentities($_POST['password']);
@@ -34,12 +35,11 @@
         }
       }
     ?>
-    <form action="<?php $_SERVER['PHP_SELF'];?>" method="post">
+  </div>
+    <form action="index.php" method="POST">
       <input type="text" name="username" placeholder="Username"><br>
       <input type="password" name="password" placeholder="Password"><br>
       <input type="submit" name="submit" value="Login">
-      <!--<input type="text" name="add" placeholder="Add a To Do">
-      <input type="submit" name="submit" value="Add">-->
     </form>
   </body>
 </html>

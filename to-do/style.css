@@ -24,3 +24,7 @@ input[type="submit"]{
   top: -1px;
   font-size: 24px;
 }
+
+.valid_section{
+  font-size: 24px;
+}
