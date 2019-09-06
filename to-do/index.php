@@ -17,7 +17,7 @@
         }
     ?>
     <h1>To Do APP</h1>
-    <form action="index.html" method="post">
+    <form action="<?php $_SERVER['PHP_SELF'];?>" method="post">
       <input type="text" name="add" placeholder="Add a To Do">
       <input type="submit" name="submit" value="Add">
     </form>
