@@ -31,11 +31,13 @@ input[type="submit"]{
 .to-do{
   background: #fff;
   width: 70%;
-  margin: 0px auto;
+  margin: 0px 10%;
   padding: 2% 5%;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   font-size: 24px;
+  width: 70%;
+  float: left;
 }
 
 .to-do input[type="text"], .to-do input[type="password"]{
@@ -44,7 +46,30 @@ input[type="submit"]{
 
 .todo_table{
   text-align: left;
-  margin-bottom: 1%;
   border: 1px solid #333;
   padding: 1% 1%;
+  width: 98%;
+  float: left;
+}
+
+.items{
+  width: 20%;
+  float: left;
+}
+
+.btn{
+  width: 80%;
+  float: left;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn span{
+  padding-left: 2%;
+}
+
+.btn input[type="submit"]{
+  width: auto;
+  height: 35px;
+  font-size: 16px;
 }

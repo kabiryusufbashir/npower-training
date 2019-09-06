@@ -30,14 +30,14 @@
             if(!empty($username)){
               if(!empty($password)){
 
-                $sql_check = "SELECT username FROM users WHERE `email`='{$username}'";
+                $sql_check = "SELECT `fullname` FROM `users` WHERE `fullname`='{$username}' && `password`='{$password}'";
                   if($result = $conn->query($sql_check)){
                     if($result->num_rows > 0){
                       $_SESSION['username'] = $username;
                       $_SESSION['msg'] = 'Welcome to your dashboard '.$username;
                         header('Location: home.php');
                     }else{
-                      $sql = "INSERT INTO users(fullname, password) VALUES('{$username}', '{$password}')";
+                      $sql = "INSERT INTO `users`(fullname, password) VALUES('{$username}', '{$password}')";
                         if($conn->query($sql) === true){
                           $_SESSION['username'] = $username;
                           $_SESSION['msg'] = 'Welcome to your dashboard '.$username;
