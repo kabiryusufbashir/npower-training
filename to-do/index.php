@@ -25,7 +25,18 @@
           $password = htmlentities($_POST['password']);
             if(!empty($username)){
               if(!empty($password)){
-                $sql = "INSERT INTO users(email, password) VALUES('{$email}', '{$password}')";
+
+                $sql_check = "SELECT email FROM users WHERE `email`='{$username}'";
+                  if($result = $conn->query($sql_check)){
+                    if($result->num_rows > 0){
+                      echo 'Username already exits';
+                    }else{
+                      $sql = "INSERT INTO users(fullname, password) VALUES('{$username}', '{$password}')";
+                        if($conn->query($sql) === true){
+                          echo 'You have successfully registered';
+                        }
+                    }
+                  }
               }else{
                 echo 'Password field empty...<hr />';
               }
