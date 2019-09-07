@@ -73,3 +73,29 @@ input[type="submit"]{
   font-size: 14px;
   border-radius: 15px;
 }
+
+@media screen and  (max-width: 760px){
+  h1{
+    font-size: 100%;
+  }
+
+  input[type="submit"]{
+    width: 30%;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  input[type="text"], input[type="password"]{
+    width: 98%;
+    height: 30px;
+    padding: 2px 2%;
+    font-size: 12px;
+    margin-bottom: 2%;
+  }
+
+  .to-do{
+    margin: 10% 10%;
+    font-size: 24px;
+    width: 70%;
+  }
+}

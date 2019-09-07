@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <title>To Do List</title>
     <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
   </head>
   <body>
 
