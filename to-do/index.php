@@ -60,11 +60,6 @@
       <input type="text" name="username" placeholder="Username"><br>
       <input type="password" name="password" placeholder="Password"><br>
       <input type="submit" name="submit" value="Login">
-      <div>
-        <label for="remember-me">
-          Remember Me <input type="checkbox" name="remember">
-        </label>
-      </div>
     </form>
   </div>
 

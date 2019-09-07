@@ -39,7 +39,7 @@
               if(!empty($todo)){
                 $sql = "INSERT INTO to_do(do, user_id) VALUES('{$todo}', '{$user_id}')";
                     if($conn->query($sql)){
-                      echo $todo .' Added';
+                      header('Location: ./home.php');
                     }else{
                       echo 'Please try again...';
                     }
