@@ -56,7 +56,7 @@
             if(!empty($selected_id)){
               $del_item = "DELETE FROM `to_do` WHERE `id`='{$selected_id}'";
                 if($del_result = $conn->query($del_item)){
-                  echo 'Deleted';
+                  header('Location: ./home.php');
                 }else{
                   echo 'Error: Please try again...';
                 }
