@@ -64,7 +64,7 @@ input[type="submit"]{
   justify-content: flex-end;
 }
 
-.btn span{
+.btn a{
   padding-left: 2%;
 }
 

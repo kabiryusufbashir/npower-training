@@ -50,8 +50,9 @@
         }
       ?>
       <?php
-        if(isset($_POST['delete'])){
-          echo 'OKayyy';
+        if(isset($_GET['todo_list_id'])){
+          $selected_id = $_GET['todo_list_id'];
+            
         }
       ?>
       <?php
@@ -65,13 +66,10 @@
                   echo '<div class="items">';
                   echo $todo_list;
                   echo '</div>';
-                  echo '<form method="POST" action="home.php">';
                     echo '<div class="btn">';
-                      echo '<span><input name="update" type="submit" value="Update"></span>';
-                      echo '<span><input name="delete" style="background:red;" type="submit" value="Delete"></span>';
+                      echo '<span><a href="home.php?todo_list_id='.$todo_list_id.'"><input name="update" type="submit" value="Update"></a></span>';
+                      echo '<span><a href="home.php?todo_list_id='.$todo_list_id.'"><input name="delete" style="background:red;" type="submit" value="Delete"></a></span>';
                     echo '</div>';
-                  echo '</form>';
-
                 echo '</div>';
                 echo '<br>';
             }
