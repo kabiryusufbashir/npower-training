@@ -50,9 +50,18 @@
         }
       ?>
       <?php
-        if(isset($_GET['todo_list_id'])){
-          $selected_id = $_GET['todo_list_id'];
-            
+        if(isset($_GET['todo_list_id_del'])){
+          $selected_id = $_GET['todo_list_id_del'];
+            if(!empty($selected_id)){
+              $del_item = "DELETE FROM `to_do` WHERE `id`='{$selected_id}'";
+                if($del_result = $conn->query($del_item)){
+                  echo 'Deleted';
+                }else{
+                  echo 'Error: ';
+                }
+            }else{
+              header('Location: ./home.php');
+            }
         }
       ?>
       <?php
@@ -67,8 +76,8 @@
                   echo $todo_list;
                   echo '</div>';
                     echo '<div class="btn">';
-                      echo '<span><a href="home.php?todo_list_id='.$todo_list_id.'"><input name="update" type="submit" value="Update"></a></span>';
-                      echo '<span><a href="home.php?todo_list_id='.$todo_list_id.'"><input name="delete" style="background:red;" type="submit" value="Delete"></a></span>';
+                      echo '<span><a href="home.php?todo_list_id_update='.$todo_list_id.'"><input name="update" type="submit" value="Update"></a></span>';
+                      echo '<span><a href="home.php?todo_list_id_del='.$todo_list_id.'"><input name="delete" style="background:red;" type="submit" value="Delete"></a></span>';
                     echo '</div>';
                 echo '</div>';
                 echo '<br>';
