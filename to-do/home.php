@@ -49,6 +49,7 @@
           }
         }
       ?>
+
       <?php
         if(isset($_GET['todo_list_id_del'])){
           $selected_id = $_GET['todo_list_id_del'];
@@ -57,13 +58,14 @@
                 if($del_result = $conn->query($del_item)){
                   echo 'Deleted';
                 }else{
-                  echo 'Error: ';
+                  echo 'Error: Please try again...';
                 }
             }else{
               header('Location: ./home.php');
             }
         }
       ?>
+
       <?php
         $todo_display = "SELECT * FROM `to_do` WHERE `user_id`='{$user_id}' ORDER BY `id` DESC";
           $todo_display = $conn->query($todo_display);
@@ -77,11 +79,48 @@
                   echo '</div>';
                     echo '<div class="btn">';
                       echo '<span><a href="home.php?todo_list_id_update='.$todo_list_id.'"><input name="update" type="submit" value="Update"></a></span>';
+                      echo '&nbsp;&nbsp;&nbsp;';
                       echo '<span><a href="home.php?todo_list_id_del='.$todo_list_id.'"><input name="delete" style="background:red;" type="submit" value="Delete"></a></span>';
                     echo '</div>';
                 echo '</div>';
                 echo '<br>';
             }
+      ?>
+
+      <?php
+        if(isset($_GET['todo_list_id_update'])){
+          $selected_id_update = $_GET['todo_list_id_update'];
+            if(!empty($selected_id_update)){
+              $sql_item_name = "SELECT `do` FROM `to_do` WHERE `id`='{$selected_id_update}'";
+              $item_display_query = $conn->query($sql_item_name);
+                if($item_display = mysqli_fetch_array($item_display_query)){
+                  $do_update = $item_display['do'];
+
+                    if(isset($_POST['update'])){
+                      if(isset($_POST['update_item_id'], $_POST['update_item_value'])){
+                        $update_item_id = htmlentities($_POST['update_item_id']);
+                        $update_item_value = htmlentities($_POST['update_item_value']);
+                          $update = "UPDATE `to_do` SET `do`='{$update_item_value}' WHERE `id`='{$update_item_id}'";
+                            if($update_run = $conn->query($update)){
+                              header('Location: ./home.php');
+                            }else{
+                              echo 'Error: please try again...';
+                            }
+                      }
+                    }
+
+                }
+              echo '<hr />
+              <form action="home.php?todo_list_id_update='.$todo_list_id.'" method="post">
+                <input type="text" name="update_item_id" value="'.$selected_id_update.'" style="display:none;">
+                <input type="text" name="update_item_value" placeholder="Update '.$do_update.' To...">
+                <input type="submit" name="update" value="Update">
+              </form>
+              ';
+            }else{
+              header('Location: ./home.php');
+            }
+        }
       ?>
 
       </div>
