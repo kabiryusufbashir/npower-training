@@ -37,6 +37,10 @@ input[type="submit"]{
   font-size: 24px;
   width: 70%;
   float: left;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation: effect 3s linear 1;
 }
 
 .to-do input[type="text"], .to-do input[type="password"]{
@@ -72,6 +76,27 @@ input[type="submit"]{
   height: 40px;
   font-size: 14px;
   border-radius: 15px;
+}
+
+@keyframes effect{
+  0%{
+    opacity: 0.2;
+    top: -40px;
+  }
+  50%{
+    opacity: 0.6;
+    top: 70px;
+    left: 50px;
+    background: #ddd;
+    color: #fff;
+  }
+  75%{
+    left: -50px;
+  }
+  100%{
+    opacity: 1;
+    top: 0px;
+  }
 }
 
 @media screen and  (max-width: 760px){
