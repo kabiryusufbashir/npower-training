@@ -65,6 +65,7 @@
   </div>
 
   </body>
+  <script type="text/javascript" src="./App.js"></script>
 </html>
 <?php
 
