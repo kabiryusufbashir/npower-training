@@ -125,6 +125,7 @@
 
       </div>
     </div>
+    <script type="text/javascript" src="./App.js"></script>
 
   </body>
 </html>
