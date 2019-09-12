@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-with, initial-scale=1.0">
   </head>
-  <body>
+  <body id="body">
 
     <?php
       include './connect.inc.php';
     ?>
 
     <div class="to-do">
-    <h1>To Do APP</h1>
+    <h1 id="title">To Do APP</h1>
     <div class="valid_section">
     <?php
       if(isset($_POST['submit'])){
