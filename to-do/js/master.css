@@ -15,7 +15,16 @@ body{
 }
 
 .myFormToDo input[type="text"]{
-  width: 96%;
+  width: 75%;
   height: 35px;
   padding: 0px 2%;
+}
+
+.myFormToDo input[type="submit"]{
+  background: green;
+  height: 35px;
+  width: 15%;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
 }
