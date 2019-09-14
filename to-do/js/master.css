@@ -1,3 +1,21 @@
 body{
   background: #333;
 }
+
+.myFormToDo{
+  width: 30%;
+  margin: 5% auto;
+  background: #fff;
+  padding: 2% 5%;
+  border-radius: 15px;
+}
+
+.myFormToDo h1{
+  text-align: center;
+}
+
+.myFormToDo input[type="text"]{
+  width: 96%;
+  height: 35px;
+  padding: 0px 2%;
+}
