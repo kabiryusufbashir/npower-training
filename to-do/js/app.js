@@ -2,26 +2,35 @@
 let display = document.getElementById('display');
 let toDo = document.getElementById('whatToDo');
 let whatToDoAdd = document.getElementById('whatToDoAdd');
+let delAdd = document.querySelectorAll('#display .delete');
 
-   whatToDoAdd.onclick = function(){
-    toDo = toDo.value;
-    if(toDo == ""){
-      alert('Not');
-    }else{
-      let newDiv = document.createElement('p');
-      let newSpan = document.createElement('span');
-      let newBtn = document.createElement('button');
+  Array.from(delAdd).forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      const p = e.target.parentElement;
+      p.parentNode.removeChild(p);
+    });
+  });
 
-        newSpan.innerHTML = toDo;
+   whatToDoAdd.addEventListener('click', function(e){
+     toDo = toDo.value;
+       if(toDo == ""){
+         alert('Not');
+       }else{
+         let newDiv = document.createElement('p');
+         let newSpan = document.createElement('span');
+         let newBtn = document.createElement('button');
 
-        newBtn.setAttribute("name", "del");
-        newBtn.innerHTML = 'Delete';
+           newSpan.innerHTML = toDo;
 
-        display.appendChild(newDiv);
-        newDiv.appendChild(newSpan);
-        newSpan.appendChild(newBtn);
+           newBtn.setAttribute("name", "del");
+           newBtn.setAttribute("class", "delete");
+           newBtn.innerHTML = 'Delete';
 
-        let position = document.getElementsByTagName('p')[0];
-          display.insertBefore(newDiv, position);
-    }
-  }
+           display.appendChild(newDiv);
+           newDiv.appendChild(newSpan);
+           newSpan.appendChild(newBtn);
+
+           let position = document.getElementsByTagName('p')[0];
+             display.insertBefore(newDiv, position);
+       }
+   });
