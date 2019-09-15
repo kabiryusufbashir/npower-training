@@ -4,7 +4,7 @@ body{
 
 .myFormToDo{
   width: 30%;
-  margin: 5% auto;
+  margin: 5% auto 0px auto;
   background: #fff;
   padding: 2% 5%;
   border-radius: 15px;
@@ -30,7 +30,12 @@ body{
 }
 
 #display{
-  margin-top: 2%;
+  background: #fff;
+  width: 30%;
+  margin: 0% auto;
+  background: #fff;
+  padding: 2% 5%;
+  border-radius: 15px;
 }
 
 #display p{
