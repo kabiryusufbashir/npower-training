@@ -41,7 +41,7 @@ body{
   cursor: pointer;
 }
 
-span button{
+p button{
   float: right;
   position: relative;
   top: -8px;
