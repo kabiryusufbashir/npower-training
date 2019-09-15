@@ -1,4 +1,4 @@
-let myFormToDo = document.getElementById('myFormToDo');
+//let myFormToDo = document.getElementById('myFormToDo');
 let display = document.getElementById('display');
 let toDo = document.getElementById('whatToDo');
 let whatToDoAdd = document.getElementById('whatToDoAdd');
@@ -14,8 +14,8 @@ let whatToDoAdd = document.getElementById('whatToDoAdd');
 
         newSpan.innerHTML = toDo;
 
-        newSpanBtn.setAttribute("name", "del");
-        newSpanBtn.innerHTML = 'Delete';
+        newBtn.setAttribute("name", "del");
+        newBtn.innerHTML = 'Delete';
 
         display.appendChild(newDiv);
         newDiv.appendChild(newSpan);
