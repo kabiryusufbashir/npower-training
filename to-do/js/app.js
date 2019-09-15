@@ -1,16 +1,17 @@
-let myFormToDo = document.forms.myFormToDo;
+let myFormToDo = document.getElementById('myFormToDo');
 let display = document.getElementById('display');
-let toDo = myFormToDo.whatToDo;
-  myFormToDo.onsubmit = function(){
+let toDo = document.getElementById('whatToDo');
+  whatToDoAdd.onclick = function(){
     toDo = toDo.value;
     if(toDo == ""){
       alert('Not');
     }else{
-      newDiv = document.createElement('div');
+      newDiv = document.createElement('p');
       newSpan = document.createElement('span');
-        display.appendChild(newDiv);
-        newDiv.appendChild(newSpan);
         newSpan.innerHTML = toDo;
-          display.insertBefore(newDiv, display.getElementsByTagName('div'));
+        newDiv.appendChild(newSpan);
+        display.appendChild(newDiv);
+        let position = document.getElementsByTagName('p')[0];
+          display.insertBefore(newDiv, position);
     }
   }
