@@ -20,7 +20,7 @@ body{
   padding: 0px 2%;
 }
 
-.myFormToDo input[type="button"], button{
+.myFormToDo input[type="submit"], button{
   background: green;
   height: 35px;
   width: 15%;
