@@ -3,7 +3,7 @@ let display = document.getElementById('display');
 let toDo = document.getElementById('whatToDo');
 let whatToDoAdd = document.getElementById('whatToDoAdd');
 
-  whatToDoAdd.onclick = function(){
+   whatToDoAdd.onclick = function(){
     toDo = toDo.value;
     if(toDo == ""){
       alert('Not');
