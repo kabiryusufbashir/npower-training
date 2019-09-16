@@ -10,6 +10,16 @@ let delAdd = document.querySelectorAll('#display .delete');
 
       e.preventDefault();
 
+      Array.from(delAdd).forEach(function(btn){
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+
+          const p = e.target.parentElement;
+          p.parentNode.removeChild(p);
+
+        });
+      });
+
       const value = addForm.querySelector('input[type="text"]').value;
 
           if(value == ""){
@@ -37,10 +47,12 @@ let delAdd = document.querySelectorAll('#display .delete');
 
     });
 
-  Array.from(delAdd).forEach(function(btn){
-    btn.addEventListener('click', function(e){
-      e.preventDefault();
-      const p = e.target.parentElement;
-      p.parentNode.removeChild(p);
+    Array.from(delAdd).forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+
+        const p = e.target.parentElement;
+        p.parentNode.removeChild(p);
+
+      });
     });
-  });
