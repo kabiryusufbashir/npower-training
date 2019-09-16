@@ -10,15 +10,16 @@ let delAdd = document.querySelectorAll('#display .delete');
 
       e.preventDefault();
 
-      Array.from(delAdd).forEach(function(btn){
+      let delAddDom = document.querySelectorAll('#display .delete');
+      Array.from(delAddDom).forEach(function(btn){
         btn.addEventListener('click', function(e){
           e.preventDefault();
-
           const p = e.target.parentElement;
           p.parentNode.removeChild(p);
 
         });
       });
+
 
       const value = addForm.querySelector('input[type="text"]').value;
 
